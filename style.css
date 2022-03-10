@@ -867,6 +867,7 @@ iframe {
   }
   .directory a {
     margin-left: 180px;
+    color: black;
   }
 
   .menu-btn.open .body {
