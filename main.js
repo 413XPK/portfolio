@@ -1,3 +1,12 @@
+//nav 'work' button scroll
+
+var proj1 = document.querySelector('.workers');
+var button = document.querySelector('#work');
+
+button.addEventListener('click', function () {
+  proj1.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
 // works filters
 
 const fsShown = document.getElementById('fs');
@@ -136,46 +145,78 @@ let width = carousel.offsetWidth;
 window.addEventListener('resize', (e) => (width = carousel.offsetWidth));
 
 // nav button animate
-var t = 0;
-
-$(function () {
-  $('.animated-icon').click(function (e) {
-    $(this).toggleClass('anim');
-  });
-
-  play();
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if (!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
 });
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     const navbar = entry.target.querySelector('.nav');
 
-function play() {
-  $('.animated-icon').click();
-  t = setInterval(function () {
-    $('.animated-icon').click();
-  }, 2500);
+//     if (entry.isIntersecting) {
+//       navbar.classList.add('navbar-animation');
+//       return; // if we added the class, exit the function
+//     }
 
-  $('.left-side').on('mousemove', function () {
-    clearInterval(t);
+//     // We're not intersecting, so remove the class!
+//     navbar.classList.remove('navbar-animation');
+//   });
+// });
 
-    $('.animated-icon').removeClass('anim');
+// observer.observe(document.querySelector('.square-wrapper'));
 
-    $(this).off('mousemove');
-  });
+//navbar frost show
+
+var element = document.querySelector('.nav-activator');
+var navbar = element.querySelector('.nav');
+if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+  navbar.classList.add('active');
+} else {
+  navbar.classList.remove('active');
 }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const navbar = entry.target.querySelector('.nav');
+// jQuery(window).on('scroll', function () {
+//   var top = jQuery(window).scrollTop(),
+//     divBottom =
+//       jQuery('.nav-activator').offset().top +
+//       jQuery('.nav-activator').outerHeight();
+//   if (divBottom > top) {
+//     jQuery('.nav').addClass('active');
+//   } else {
+//     jQuery('.nav').removeClass('active');
+//   }
+// });
 
-    if (entry.isIntersecting) {
-      navbar.classList.add('navbar-animation');
-      return; // if we added the class, exit the function
-    }
+// const scrolledEl = document.querySelectorAll('.nav-activator');
 
-    // We're not intersecting, so remove the class!
-    navbar.classList.remove('navbar-animation');
-  });
-});
+// function navSlide(e) {
+//   scrolledEl.forEach((frostedNav) => {
+//     const navbar = document.querySelector('.nav');
 
-observer.observe(document.querySelector('.square-wrapper'));
+//     //halfway through the height
+//     const slideInAt =
+//       window.scrollY + window.innerHeight - frostedNav.height / 2;
+
+//     //bottom of the element
+//     const imageBottom = frostedNav.offsetTop + frostedNav.height;
+//     const isHalfShown = slideInAt > frostedNav.offsetTop;
+//     const isScrolledPast = window.scrollY > imageBottom;
+//     if (isScrolledPast) {
+//       navbar.classList.add('active');
+//     } else {
+//       navbar.classList.remove('active');
+//     }
+//   });
+// }
+
+// window.addEventListener('scroll', debounce(checkSlide));
 
 // document.getElementsByClassName('tap2shop_frame').style.display = 'inline-flex';
 
