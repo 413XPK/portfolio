@@ -146,16 +146,20 @@ window.addEventListener('resize', (e) => (width = carousel.offsetWidth));
 
 // nav button animate
 const menuBtn = document.querySelector('.menu-btn');
+const directoryMenu = document.querySelector('.directory');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
   if (!menuOpen) {
     menuBtn.classList.add('open');
+    directoryMenu.classList.add('activated');
     menuOpen = true;
   } else {
     menuBtn.classList.remove('open');
+    directoryMenu.classList.remove('activated');
     menuOpen = false;
   }
 });
+
 // const observer = new IntersectionObserver((entries) => {
 //   entries.forEach((entry) => {
 //     const navbar = entry.target.querySelector('.nav');
@@ -175,7 +179,7 @@ menuBtn.addEventListener('click', () => {
 //navbar frost show
 
 var element = document.querySelector('.nav-activator');
-var navbar = element.querySelector('.nav');
+var navbar = element.querySelector('.container');
 if (element.scrollHeight - element.scrollTop === element.clientHeight) {
   navbar.classList.add('active');
 } else {
