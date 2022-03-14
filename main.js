@@ -175,16 +175,15 @@ menuBtn.addEventListener('click', () => {
 // });
 
 // observer.observe(document.querySelector('.square-wrapper'));
-
+//
 //navbar frost show
-
-var element = document.querySelector('.nav-activator');
-var navbar = element.querySelector('.container');
-if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-  navbar.classList.add('active');
-} else {
-  navbar.classList.remove('active');
-}
+// var element = document.querySelector('.nav-activator');
+// var navbar = element.querySelector('.container');
+// if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+//   navbar.classList.add('active');
+// } else {
+//   navbar.classList.remove('active');
+// }
 
 // jQuery(window).on('scroll', function () {
 //   var top = jQuery(window).scrollTop(),
@@ -232,13 +231,6 @@ if (element.scrollHeight - element.scrollTop === element.clientHeight) {
 // button.addEventListener('click', function () {
 //   proj1.scrollIntoView({ behavior: 'smooth', block: 'center' });
 // });
-
-// $(function() {
-//     $.scrollify({
-//       section : ".main",
-//       scrollSpeed : 1000
-//     });
-//   });
 
 // const inputs = document.querySelectorAll(".input");
 

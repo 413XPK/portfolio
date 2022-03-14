@@ -93,6 +93,10 @@ body {
   position: sticky;
   margin: -20px;
   z-index: 1050;
+  backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%)
+    brightness(140%);
+}
 }
 
 .container .active {
@@ -104,7 +108,7 @@ body {
 
 /* navbar background */
 
-@keyframes wipe-enter {
+/* @keyframes wipe-enter {
   0% {
     transform: scale(0, 0.025);
   }
@@ -118,20 +122,20 @@ body {
     animation-name: wipe-enter;
     animation-duration: 1s;
   }
-}
+} */
 
 .active {
   backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
 }
 
-.nav-activator {
-  /* position: absolute; */
+/* .nav-activator {
+  position: absolute;
   opacity: 0;
   height: 100px;
   width: 500px;
   background-color: #fff;
   z-index: 5000;
-}
+} */
 
 /* navbar background end */
 
@@ -218,6 +222,7 @@ body {
 }
 
 .pop-out-chat {
+  cursor: pointer;
   z-index: 101;
   width: 100px;
   height: 150px;
@@ -225,6 +230,7 @@ body {
 }
 
 .pop-out-desc {
+  cursor: pointer;
   display: flex;
   position: fixed;
   right: 3vw;
@@ -245,7 +251,6 @@ body {
     #e9c2fa,
     #f2fbdd
   );
-  cursor: pointer;
   transition: all 0.15s ease-out;
   overflow: hidden;
 
@@ -258,6 +263,10 @@ body {
   padding-left: 22px;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
+}
+
+.wrapper button {
+  cursor: pointer;
 }
 
 .wrapper .pop-out-chat:hover ~ .pop-out-desc,
@@ -356,7 +365,7 @@ body {
 
 .main {
   padding-bottom: 50px;
-  margin-top: -100px;
+  margin-top: 100px;
 }
 
 /* hero end */
@@ -386,6 +395,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 700px;
+  margin-bottom: -30px;
 }
 
 .row {
@@ -406,9 +416,16 @@ body {
 }
 
 .card-body {
-  padding: 10px 50px;
+  /* padding: 10px 50px; */
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
+  width: 100%;
+}
+
+.card-body p {
   width: 250px;
 }
 /* cards section end */
@@ -629,7 +646,15 @@ body {
 .footer {
   height: 100px;
   background-color: black;
+  color: white;
+  font-family: 'roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -30px -20px -30px;
 }
+
+
 /* footer section end */
 
 /*instagram */
