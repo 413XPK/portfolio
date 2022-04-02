@@ -913,7 +913,7 @@ iframe {
     display: flex;
     width: 100px;
     margin-right: 10px;
-    padding-left: 100px;
+    padding-left: 120px;
   }
 
   body {
@@ -992,7 +992,7 @@ iframe {
   }
 
   #about {
-    margin-left: 0px;
+    margin-left: 50px;
   }
 
   #work {
@@ -1037,7 +1037,7 @@ iframe {
 
   .hero-background {
     width: 600px;
-    margin-top: 250px;
+    margin-top: 350px;
   }
 
   .inner-hero-text h1 {
@@ -1050,8 +1050,7 @@ iframe {
     z-index: -1;
     font-size: 35px;
     color: #fff;
-    width: 100%;
-    /* margin-top: -100px; */
+    /* width: 100%; */
     width: 285px;
   }
 
@@ -1061,6 +1060,7 @@ iframe {
     padding-bottom: 0px;
     display: flex;
     align-items: center;
+    display: none;
   }
 
   .hero-text2 span {
@@ -1070,13 +1070,13 @@ iframe {
   .hero-text2 {
     display: flex;
     align-items: center;
-    margin-top: -300px;
     position: static;
     font-family: 'roboto', sans-serif;
     z-index: 9;
     font-size: 100px;
-    margin-top: 0px;
     width: 285px;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
   }
 
   .hero-sub {
@@ -1254,7 +1254,7 @@ iframe {
 
   .me {
     width: 500px;
-    margin-left: -30px;
+    margin-left: -10px !important;
     display: flex;
     margin-top: 30px;
   }
@@ -1357,7 +1357,7 @@ iframe {
   }
   .inner-hero-text {
     width: 650px;
-    margin-left: 80px;
+    margin-left: 0;
   }
   .inner-hero-text h1 {
     font-size: 50px;
