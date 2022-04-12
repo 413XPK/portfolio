@@ -896,7 +896,8 @@ iframe {
 
   .nav {
     display: inline-flex !important;
-    max-width: 82%;
+    /* max-width: 75%; */
+    min-width: 50vw !important;
     /* width: 100%; */
     padding-left: 0px !important;
     margin-left: -75px !important;
@@ -918,7 +919,7 @@ iframe {
   .footer {
     /* padding-right: 114px !important; */
     display: flex;
-    max-width: 290px !important;
+    min-width: 105vw !important;
   }
 
   .footer p {
@@ -930,11 +931,9 @@ iframe {
   .hero-content {
     position: absolute;
     margin-left: -50px !important;
-    min-width: 365px !important;
-    max-width: 300px !important;
+    padding-right: 50px !important;
     height: 900px;
-    /* margin: 0; */
-
+    min-width: 145vw !important;
     background-image: linear-gradient(15deg, #2d2934 35%, #f3f3f3);
     z-index: -5;
   }
@@ -951,7 +950,7 @@ iframe {
 
   .nav {
     padding-left: 10px !important;
-    /* max-width: 100%; */
+    min-width: 60vw !important;
   }
 
   .inner-hero-text h1 {
@@ -965,8 +964,6 @@ iframe {
     margin: 0;
     background-image: linear-gradient(15deg, #2d2934 35%, #f3f3f3);
     z-index: -5;
-    padding-right: 165px !important;
-    min-width: 423px;
   }
 
   .footer {
@@ -975,13 +972,41 @@ iframe {
 
     padding-right: 75px !important;
     padding-left: 100px !important;
-    width: 310px !important;
+    width: 80vw !important;
   }
   .footer p {
     display: flex;
     align-items: center;
     justify-content: center;
     /* margin-left: 20%; */
+  }
+}
+
+@media screen and (max-width: 374px) and (min-width: 320px) {
+  .nav {
+    min-width: 75vw !important;
+  }
+
+  .hero-content {
+    min-width: 126vw;
+  }
+
+  .footer {
+    min-width: 89vw;
+  }
+}
+
+@media screen and (max-width: 424px) and (min-width: 374px) {
+  .nav {
+    width: 66vw !important;
+  }
+
+  .hero-content {
+    min-width: 105vw !important;
+  }
+
+  .footer {
+    width: 121vw;
   }
 }
 
@@ -1038,7 +1063,7 @@ iframe {
     width: 100%;
 
     margin-left: -120px !important;
-    padding-right: 226px !important;
+    padding-right: 231px !important;
     position: -webkit-sticky;
     position: sticky;
     overflow: hidden;
@@ -1426,7 +1451,12 @@ iframe {
 /* mobile end */
 
 /* tablet */
-@media screen and (max-width: 768px) and (min-width: 426px) {
+/* @media (max-width: 768px) {
+  .footer {
+  }
+} */
+
+@media screen and (max-width: 767px) and (min-width: 426px) {
   .name {
     margin-left: 15vw !important;
     margin-right: 15vw;
@@ -1516,7 +1546,8 @@ iframe {
     left: 0;
     right: 0;
     margin-right: -75px !important;
-    min-width: none;
+    width: 160vw;
+    /* max-width: 195% !important; */
   }
 }
 /* tablet end */
