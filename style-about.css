@@ -863,6 +863,10 @@ iframe {
   justify-content: center;
 }
 
+.learn-about h1 {
+  margin-left: 70px;
+}
+
 .learn-paragraph {
   width: 500px;
   display: flex;
