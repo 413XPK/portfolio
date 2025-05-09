@@ -7,6 +7,19 @@ body {
   overflow-x: hidden;
 }
 
+
+.socials img {
+  width:30px;
+  height: 30px;
+}
+
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* lines */
 #left-line1 {
   height: 2px;
