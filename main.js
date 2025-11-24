@@ -27,6 +27,11 @@ const fifthDiv = document.getElementById('fifth');
 const sixthDiv = document.getElementById('sixth');
 
 const seventhDiv = document.getElementById('seventh');
+
+const eighthDiv = document.getElementById('eighth');
+
+const ninthDiv = document.getElementById('ninth');
+
 function fsShow() {
   if (secondDiv.style.display === 'none') {
     firstDiv.style.display = 'block';
@@ -36,6 +41,8 @@ function fsShow() {
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
     seventhDiv.style.display = 'block';
+    eighthDiv.style.display = 'block';
+    ninthDiv.style.display = 'block';
   } else {
     firstDiv.style.display = 'block';
     secondDiv.style.display = 'none';
@@ -44,6 +51,8 @@ function fsShow() {
     fifthDiv.style.display = 'none';
     sixthDiv.style.display = 'none';
     seventhDiv.style.display = 'none';
+    eighthDiv.style.display = 'none';
+    ninthDiv.style.display = 'none';
   }
 }
 
@@ -56,6 +65,8 @@ function jsShow() {
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
     seventhDiv.style.display = 'block';
+    eighthDiv.style.display = 'block';
+    ninthDiv.style.display = 'block';
   } else {
     firstDiv.style.display = 'none';
     secondDiv.style.display = 'none';
@@ -64,24 +75,10 @@ function jsShow() {
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
     seventhDiv.style.display = 'none';
+    eighthDiv.style.display = 'none';
+    ninthDiv.style.display = 'none';
   }
 }
-
-// function animShow() {
-//   if (firstDiv.style.display === 'none') {
-//     firstDiv.style.display = 'block';
-//     secondDiv.style.display = 'block';
-//     thirdDiv.style.display = 'block';
-//     fourthDiv.style.display = 'block';
-//     fifthDiv.style.display = 'block';
-//   } else {
-//     firstDiv.style.display = 'none';
-//     secondDiv.style.display = 'block';
-//     thirdDiv.style.display = 'none';
-//     fourthDiv.style.display = 'none';
-//     fifthDiv.style.display = 'none';
-//   }
-// }
 
 function uxuiShow() {
   if (firstDiv.style.display === 'none') {
@@ -92,6 +89,8 @@ function uxuiShow() {
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
     seventhDiv.style.display = 'block';
+    eighthDiv.style.display = 'block';
+    ninthDiv.style.display = 'block';
   } else {
     firstDiv.style.display = 'none';
     secondDiv.style.display = 'block';
@@ -100,6 +99,8 @@ function uxuiShow() {
     fifthDiv.style.display = 'none';
     sixthDiv.style.display = 'none';
     seventhDiv.style.display = 'none';
+    eighthDiv.style.display = 'none';
+    ninthDiv.style.display = 'none';
   }
 }
 
@@ -114,17 +115,9 @@ function illShow() {
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
     seventhDiv.style.display = 'block';
+    eighthDiv.style.display = 'block';
+    ninthDiv.style.display = 'block';
     
-    if (this.classList !=='active') {
-        // clicking the already-active filter toggles it off
-        this.classList.add('active');
-        
-      } else if (this.classList.contains('active')) {
-        this.classList.remove('active');
-      }
-      // remove active from all, then activate the clicked one
-      // filterDivs.forEach((other) => other.classList.remove('active'));
-      // this.classList.add('active');
   } else {
     firstDiv.style.display = 'none';
     secondDiv.style.display = 'block';
@@ -133,6 +126,8 @@ function illShow() {
     fifthDiv.style.display = 'none';
     sixthDiv.style.display = 'none';
     seventhDiv.style.display = 'block';
+    eighthDiv.style.display = 'block';
+    ninthDiv.style.display = 'block';
   }
 }
 

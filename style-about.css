@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  background: linear-gradient( #b0a8b9, #2d2934 60%);
+  background: linear-gradient( #b0a8b9 20%, #2d2934 80%);
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -106,36 +106,9 @@ body {
     brightness(140%);
 }
 
-/* navbar background */
-
-/* @keyframes wipe-enter {
-  0% {
-    transform: scale(0, 0.025);
-  }
-  50% {
-    transform: scale(1, 0.025);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .navbar-animation {
-    animation-name: wipe-enter;
-    animation-duration: 1s;
-  }
-} */
-
 .active {
   backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
 }
-
-/* .nav-activator {
-  position: absolute;
-  opacity: 0;
-  height: 100px;
-  width: 500px;
-  background-color: #fff;
-  z-index: 5000;
-} */
 
 /* navbar background end */
 
