@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  background: linear-gradient(#2d2934 40%, #b0a8b9);
+  background: linear-gradient( #b0a8b9, #2d2934 60%);
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -79,7 +79,7 @@ body {
   font-size: x-large;
   margin-left: 50px;
   margin-right: 25vw;
-  color: white;
+  color: blue;
 }
 
 .nav {
@@ -267,6 +267,7 @@ body {
   width: 25px;
   padding-top: 12px;
   padding-left: 6px;
+  padding-bottom: 5px;
   justify-content: center;
   align-items: center;
 }
@@ -358,8 +359,9 @@ body {
   /* margin-top: 200px; */
   display: flex;
   justify-content: center;
-  margin-left: 50px;
+  margin-left: -350px;
   width: 1100px;
+  margin-top: -400px;
 
   /* z-index: 1; */
   /* background-color: white; */
@@ -843,7 +845,7 @@ iframe {
 
 .learn-about,
 .learn-paragraph {
-  /* color: black; */
+  color: black;
 }
 
 .learn {
@@ -854,6 +856,7 @@ iframe {
   font-family: 'roboto', sans-serif;
   align-items: center;
   margin-top: 100px;
+  margin-bottom:
 }
 
 .learn-about {
@@ -871,6 +874,7 @@ iframe {
   width: 500px;
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
 /* learn about section end */
 
@@ -878,7 +882,7 @@ iframe {
 .me {
   width: 500px;
 
-  margin-top: 67px;
+  margin-top: -82px;
   justify-content: center;
 }
 /* portrait picture end*/
@@ -931,7 +935,7 @@ iframe {
   }
 
   body {
-    background: linear-gradient(#2d2934 40%, #b0a8b9);
+    background: linear-gradient( #b0a8b9);
     overflow: hidden;
     overflow-y: scroll;
     /* max-width: 300px; */
@@ -1261,7 +1265,12 @@ iframe {
     margin-left: 15px !important;
   }
 
-  .learn-about,
+  .learn-about {
+    display: flex;
+    justify-content: center;
+  }
+
+
   .learn-paragraph {
     width: 250px !important;
     margin-left: 30px !important;

@@ -25,6 +25,8 @@ const illShown = document.getElementById('ill');
 const fifthDiv = document.getElementById('fifth');
 
 const sixthDiv = document.getElementById('sixth');
+
+const seventhDiv = document.getElementById('seventh');
 function fsShow() {
   if (secondDiv.style.display === 'none') {
     firstDiv.style.display = 'block';
@@ -33,6 +35,7 @@ function fsShow() {
     fourthDiv.style.display = 'block';
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
+    seventhDiv.style.display = 'block';
   } else {
     firstDiv.style.display = 'block';
     secondDiv.style.display = 'none';
@@ -40,6 +43,7 @@ function fsShow() {
     fourthDiv.style.display = 'none';
     fifthDiv.style.display = 'none';
     sixthDiv.style.display = 'none';
+    seventhDiv.style.display = 'none';
   }
 }
 
@@ -51,6 +55,7 @@ function jsShow() {
     fourthDiv.style.display = 'block';
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
+    seventhDiv.style.display = 'block';
   } else {
     firstDiv.style.display = 'none';
     secondDiv.style.display = 'none';
@@ -58,6 +63,7 @@ function jsShow() {
     fourthDiv.style.display = 'none';
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
+    seventhDiv.style.display = 'none';
   }
 }
 
@@ -85,6 +91,7 @@ function uxuiShow() {
     fourthDiv.style.display = 'block';
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
+    seventhDiv.style.display = 'block';
   } else {
     firstDiv.style.display = 'none';
     secondDiv.style.display = 'block';
@@ -92,8 +99,11 @@ function uxuiShow() {
     fourthDiv.style.display = 'block';
     fifthDiv.style.display = 'none';
     sixthDiv.style.display = 'none';
+    seventhDiv.style.display = 'none';
   }
 }
+
+const filterDivs = document.querySelectorAll('.filters a');
 
 function illShow() {
   if (firstDiv.style.display === 'none') {
@@ -103,6 +113,18 @@ function illShow() {
     fourthDiv.style.display = 'block';
     fifthDiv.style.display = 'block';
     sixthDiv.style.display = 'block';
+    seventhDiv.style.display = 'block';
+    
+    if (this.classList !=='active') {
+        // clicking the already-active filter toggles it off
+        this.classList.add('active');
+        
+      } else if (this.classList.contains('active')) {
+        this.classList.remove('active');
+      }
+      // remove active from all, then activate the clicked one
+      // filterDivs.forEach((other) => other.classList.remove('active'));
+      // this.classList.add('active');
   } else {
     firstDiv.style.display = 'none';
     secondDiv.style.display = 'block';
@@ -110,6 +132,7 @@ function illShow() {
     fourthDiv.style.display = 'none';
     fifthDiv.style.display = 'none';
     sixthDiv.style.display = 'none';
+    seventhDiv.style.display = 'block';
   }
 }
 
@@ -160,93 +183,30 @@ menuBtn.addEventListener('click', () => {
   }
 });
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     const navbar = entry.target.querySelector('.nav');
+// Persistent toggle for filter buttons: clicking a filter div
+// toggles an `.active` class so the box-shadow stays until clicked again.
+function _initFilterToggle() {
+  // target the inner divs (these have the inline onclick handlers in HTML)
+  const filterDivs = document.querySelectorAll('.filters a');
+  // if (!filterDivs || filterDivs.length === 0) return;
+  filterDivs.forEach((d) => {
+    // d.style.cursor = 'pointer';
+    d.addEventListener('click', function (e) {
+      // single-select behavior: clicking one filter makes it the only active one
+      if (this.classList.contains('active')) {
+        // clicking the already-active filter toggles it off
+        this.classList.remove('active');
+        return;
+      }
+      // remove active from all, then activate the clicked one
+      filterDivs.forEach((other) => other.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+}
 
-//     if (entry.isIntersecting) {
-//       navbar.classList.add('navbar-animation');
-//       return; // if we added the class, exit the function
-//     }
-
-//     // We're not intersecting, so remove the class!
-//     navbar.classList.remove('navbar-animation');
-//   });
-// });
-
-// observer.observe(document.querySelector('.square-wrapper'));
-//
-//navbar frost show
-// var element = document.querySelector('.nav-activator');
-// var navbar = element.querySelector('.container');
-// if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-//   navbar.classList.add('active');
-// } else {
-//   navbar.classList.remove('active');
-// }
-
-// jQuery(window).on('scroll', function () {
-//   var top = jQuery(window).scrollTop(),
-//     divBottom =
-//       jQuery('.nav-activator').offset().top +
-//       jQuery('.nav-activator').outerHeight();
-//   if (divBottom > top) {
-//     jQuery('.nav').addClass('active');
-//   } else {
-//     jQuery('.nav').removeClass('active');
-//   }
-// });
-
-// const scrolledEl = document.querySelectorAll('.nav-activator');
-
-// function navSlide(e) {
-//   scrolledEl.forEach((frostedNav) => {
-//     const navbar = document.querySelector('.nav');
-
-//     //halfway through the height
-//     const slideInAt =
-//       window.scrollY + window.innerHeight - frostedNav.height / 2;
-
-//     //bottom of the element
-//     const imageBottom = frostedNav.offsetTop + frostedNav.height;
-//     const isHalfShown = slideInAt > frostedNav.offsetTop;
-//     const isScrolledPast = window.scrollY > imageBottom;
-//     if (isScrolledPast) {
-//       navbar.classList.add('active');
-//     } else {
-//       navbar.classList.remove('active');
-//     }
-//   });
-// }
-
-// window.addEventListener('scroll', debounce(checkSlide));
-
-// document.getElementsByClassName('tap2shop_frame').style.display = 'inline-flex';
-
-// document.getElementById('tap2shop_widget').style.display = 'inline-flex';
-
-// var proj1 = document.querySelector('#proj1');
-// var button = document.querySelector('.scroll');
-
-// button.addEventListener('click', function () {
-//   proj1.scrollIntoView({ behavior: 'smooth', block: 'center' });
-// });
-
-// const inputs = document.querySelectorAll(".input");
-
-// function focusFunc() {
-//     let parent = this.parentNode;
-//     parent.classList.add("focus");
-// }
-
-// function blurFunc() {
-//     let parent = this.parentNode;
-//     if (this.value == "") {
-//         parent.classList.remove("focus");
-//     }
-// }
-
-// inputs.forEach((input) => {
-//     input.addEventListener("focus", focusFunc);
-//     input.addEventListener("blur", blurFunc);
-// });
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', _initFilterToggle);
+} else {
+  _initFilterToggle();
+}
